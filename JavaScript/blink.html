@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script>
+
+            // Toggles visibility of greeting
+            function blink()
+            {
+                let body = document.querySelector('body');
+                if (body.style.visibility == 'hidden')
+                {
+                    body.style.visibility = 'visible';
+                }
+                else
+                {
+                    body.style.visibility = 'hidden';
+                }
+            }
+
+            // Blink every 500ms
+            window.setInterval(blink, 500);
+
+        </script>
+        <title>blink</title>
+    </head>
+    <body>
+        hello, world
+    </body>
+</html>
+
+<!-- The above example shows and hides the 'hello, world' text with an internal of 0.5 milli sec.
+ 'window.SetInterval' was used, which takes in two arguments, a function to call, waiting period between function call -->
