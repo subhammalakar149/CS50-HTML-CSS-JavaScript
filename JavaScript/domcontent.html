@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!-- DOMContentLoaded demonstration -->
+
+<html lang="en">
+    <head>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('form').addEventListener('submit', function(e){
+                    alert('hello, ' + document.querySelector('#name').value);
+                    e.preventDefault();
+                });
+            });
+        </script>
+        <title>Hello2-js</title>
+        <head>
+            <body>
+                <form>
+                    <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+                    <input type="Submit">
+                </form>
+            </body>
+        </head>
+    </head>
+</html>
+
+<!-- This version of the code creates an 'addEventListener' to listen to the form submit being triggered.
+ Notice how 'DOMContentLoaded' ensures that the whole page is loaded before executing the JavaScript -->
