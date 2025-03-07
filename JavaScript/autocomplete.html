@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>autocomplete</title>
+    </head>
+
+    <body>
+
+        <input autocomplete="off" autofocus placeholder="Query" type="text">
+
+        <ul></ul>
+
+        <script src="large.js"></script>
+        <script>
+
+            let input = document.querySelector('input');
+            input.addEventListener('keyup', function(event) {
+                let html = '';
+                if (input.value) {
+                    for (word of WORDS) {
+                        if (word.startsWith(input.value)) {
+                            html += `<li>${word}</li>`;
+                        }
+                    }
+                }
+                document.querySelector('ul').innerHTML = html;
+            });
+
+        </script>
+
+    </body>
+</html>
+
+<!-- The above is a JS implementation of autocomplete. This pulls from a file (not pictured here) called large.js that is a list of words.-->
