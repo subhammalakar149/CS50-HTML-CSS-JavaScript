@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<!-- onsubmit demonstration -->
+
+<html lang="en">
+    <head>
+        <script>
+            function greet()
+            {
+                alert('hello, ' + document.querySelector('#name').value);
+            }
+        </script>
+        <title>Hello-js</title>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;"> <!-- onsubmit triggers the greet() script, which uses an alert to create a pop up dialog -->
+            <input autocomplete="off" autofocus id="name" placeholder="Name" type="text"> <!-- id=name is assigned to the script obtained from the textbox -->
+            <input type="submit"> <!-- button to initiate -->
+        </form>
+    </body>
+</html>
+
+<!-- generally the above is a bad design to mix onsubmit and JS -->
+<!-- Check domcontent.html for better use case -->
